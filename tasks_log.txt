@@ -1,0 +1,166 @@
+
+Sep 20:
+
+GitLog Analyzer 
+    Design Models 
+    Extract Git Logs
+    Save to Database
+
+  Next Steps:
+    Get Jira Tickets
+    Send via Email
+    Send via Slack
+
+
+
+
+
+Jira CURLs:
+
+
+
+curl -u heyab.gebremariam@gmail.com:ATATT3xFfGF03PIYGM86qHfMII961xEhemHG7xU167Z2kpF5AiGLhQJnm-HVVGF8U4SBRwuz6lPPwrpVlq2vY87xEydYmYYNYskn9fAsht_xUf5YPgDWLaZukSePmaBZtFiLtRAGr1wHM6k82KSoqi7q9JDQ5P-nA-eLW7DEpNRI8ZYnfAeMv5I=569DE168 \
+  -X GET \
+  -H "Accept: application/json" \
+  "https://bmtechnology.atlassian.net/rest/api/3/myself"
+
+
+curl -u heyab.gebremariam@gmail.com:ATATT3xFfGF03PIYGM86qHfMII961xEhemHG7xU167Z2kpF5AiGLhQJnm-HVVGF8U4SBRwuz6lPPwrpVlq2vY87xEydYmYYNYskn9fAsht_xUf5YPgDWLaZukSePmaBZtFiLtRAGr1wHM6k82KSoqi7q9JDQ5P-nA-eLW7DEpNRI8ZYnfAeMv5I=569DE168 \
+  -X GET \
+  -H "Accept: application/json" \
+  "https://bmtechnology.atlassian.net/rest/api/3/project/search"
+
+
+curl -u heyab.gebremariam@gmail.com:ATATT3xFfGF03PIYGM86qHfMII961xEhemHG7xU167Z2kpF5AiGLhQJnm-HVVGF8U4SBRwuz6lPPwrpVlq2vY87xEydYmYYNYskn9fAsht_xUf5YPgDWLaZukSePmaBZtFiLtRAGr1wHM6k82KSoqi7q9JDQ5P-nA-eLW7DEpNRI8ZYnfAeMv5I=569DE168 \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  --data '{"jql":"project=BDEV ORDER BY updated DESC","maxResults":5,"fields":["key","summary","status","assignee","reporter","updated"]}' \
+  "https://bmtechnology.atlassian.net/rest/api/3/search"
+
+
+
+curl -u heyab.gebremariam@gmail.com:ATATT3xFfGF03PIYGM86qHfMII961xEhemHG7xU167Z2kpF5AiGLhQJnm-HVVGF8U4SBRwuz6lPPwrpVlq2vY87xEydYmYYNYskn9fAsht_xUf5YPgDWLaZukSePmaBZtFiLtRAGr1wHM6k82KSoqi7q9JDQ5P-nA-eLW7DEpNRI8ZYnfAeMv5I=569DE168 \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  --data '{
+    "jql": "project=BDEV ORDER BY updated DESC",
+    "maxResults": 100,
+    "fields": ["key","summary","status","assignee","reporter","customfield_10026"] 
+  }' \
+  "https://bmtechnology.atlassian.net/rest/api/3/search"
+
+
+
+jq --version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Design models (data models)
+
+### Developer
+
+- `id` (UUID) — primary key
+- `name` (text)
+- `email` (text, unique)
+- `github_username` (text, optional)
+- `created_at` (timestamp)
+
+Purpose: identify commit authors and map to integrations.
+
+### Commit
+
+- `id` (UUID) — primary key
+- `repo_name` (text)
+- `commit_hash` (text)
+- `author_name` (text)
+- `author_email` (text)
+- `message` (text)
+- `timestamp` (timestamptz)
+- `is_overtime` (boolean)
+- `analyzed_at` (timestamptz)
+- `lines_added` (int, optional)
+- `lines_deleted` (int, optional)
+
+Purpose: store raw commit data for traceability.
+
+### Report
+
+- `id` (UUID) — primary key
+- `developer_id` (UUID) — FK -> developer(id)
+- `repo_name` (text, optional)
+- `start_date` (date)
+- `end_date` (date)
+- `num_commits` (int)
+- `num_regular` (int)
+- `num_overtime` (int)
+- `report_json` (jsonb) — full structured report
+- `created_at` (timestamptz)
+- `sent_to_slack_at` (timestamptz, optional)
+- `sent_to_email_at` (timestamptz, optional)
+
+Purpose: aggregated per-developer report snapshot.
+
+### Report_Commits (join table)
+
+- `id` (UUID)
+- `report_id` (UUID) — FK -> report(id)
+- `commit_id` (UUID) — FK -> commit(id)
+
+Purpose: allow quickly listing commits attached to a report.
+
+
+## Example SQL queries
+
+1. Insert a developer (if not exists):
+
+```sql
+INSERT INTO developers (name, email, github_username)
+VALUES ('Heyab Gebremariam', 'heyab.gebremariam@gmail.com', 'heyab-gebremariam')
+ON CONFLICT (email) DO NOTHING;
+```
+
+2. Save a commit (idempotent):
+
+```sql
+INSERT INTO commits (repo_name, commit_hash, author_name, author_email, message, timestamp, is_overtime, lines_added, lines_deleted)
+VALUES ('myrepo', 'abc123', 'Heyab Gebremariam', 'heyab.gebremariam@gmail.com', 'Fix bug', '2025-08-06T12:34:56Z', false, 10, 2)
+ON CONFLICT (repo_name, commit_hash) DO UPDATE
+  SET message = EXCLUDED.message,
+      lines_added = COALESCE(EXCLUDED.lines_added, commits.lines_added),
+      lines_deleted = COALESCE(EXCLUDED.lines_deleted, commits.lines_deleted);
+```
+
+3. Save report and link commits:
+
+```sql
+-- assume developer exists and we have a list of commit ids
+BEGIN;
+INSERT INTO reports (developer_id, repo_name, start_date, end_date, num_commits, num_regular, num_overtime, report_json)
+VALUES ('<dev-uuid>','myrepo','2025-08-01','2025-08-31', 42, 35, 7, '{"summary": {}}'::jsonb)
+RETURNING id;
+-- then insert into report_commits for each commit id
+COMMIT;
+```
+
+---

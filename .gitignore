@@ -61,6 +61,8 @@ uploads/
 
 # Environment variables
 .env
+finance-frontend/
+finance-backend/
 
 # Misc
 *.bak

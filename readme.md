@@ -1,7 +1,7 @@
 # Git Logs Analyzer
 
 Git Logs Analyzer is a tool to **collect, analyze, persist, and distribute commit reports by developer**.
-It combines **Git commit history** and **Jira tickets** into structured reports, summarizes them with **Gemini**, and distributes via **Slack and Gmail** using MCP tools.
+It combines **Git commit history** and **Jira tickets** into structured reports, summarizes them with **Gemini**, and distributes via **Gmail** using MCP tools.
 
 ---
 
@@ -11,7 +11,7 @@ It combines **Git commit history** and **Jira tickets** into structured reports,
 * Distinguish between **regular** vs **overtime** commits.
 * Fetch and analyze **Jira issues** alongside commits.
 * Persist structured reports in `data/reports.json`.
-* Send reports via **Slack** or **Gmail**.
+* Send reports via **Gmail**.
 
 ---
 
@@ -25,7 +25,6 @@ Provides MCP tools:
 * `get_commits_by_author(author)` → fetch commits for a developer.
 * `get_tickets_and_commits_by_email(email)` → fetch Jira tickets and commits merged by email.
 * `save_reports_batch(reports)` → save multiple reports in `/data/reports.json`.
-* `send_reports_batch_slack(reports)` → send multiple reports via Slack.
 * `send_reports_batch_gmail(reports)` → send multiple reports via Gmail.
 
 ### `client.py`
@@ -36,7 +35,7 @@ Implements workflow:
 2. Retrieve merged Jira tickets + commits per author email.
 3. Ask Gemini to **summarize** commits + tickets.
 4. Build `Report` objects and collect them in a batch.
-5. Save batch locally and send via **Slack** and **Gmail**.
+5. Save batch locally and send via **Gmail**.
 
 ### `models.py`
 
@@ -55,11 +54,13 @@ Defines structured dataclasses:
 git-logs-analyzer/
 ├── server.py
 ├── client.py
+├── test.py
 ├── models.py
 ├── data/
 │   ├── commits.json
 │   ├── formatted-jira-issues.json
 │   ├── jira-commits-merged.json
+│   ├── jira-issues.json
 │   └── reports.json
 ├── 01_commits-by-author.sh
 ├── 02_fetch-jira-issues.sh

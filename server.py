@@ -120,22 +120,69 @@ def save_reports_batch(reports: list) -> str:
     except Exception as e:
         return f"Error saving reports: {str(e)}"
 
-
-@mcp.tool()
-def send_reports_batch_slack(reports: list) -> str:
-    """Send multiple reports via Slack."""
-    count = len(reports)
     
-    for r in reports:
-        r["sent_to_slack_at"] = "now"
-    return f"[Slack] {count} reports sent!"
-
-
 @mcp.tool()
-def send_reports_batch_gmail(reports: list) -> str:
-    """Send multiple reports via Gmail."""
-    count = len(reports)
-    
-    for r in reports:
-        r["sent_to_email_at"] = "now"
-    return f"[Gmail] {count} reports sent!"
+def send_reports_batch_gmail(
+    reports: list,
+    subject: str = "Git Reports",
+    recipient: str = None,
+    smtp_data: dict = None
+) -> str:
+    """Send multiple reports via Gmail"""
+    import smtplib
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    import logging
+
+    logging.info("Starting Gmail sending process...")
+
+    if smtp_data is None:
+        return "Gmail sending error: SMTP credentials not provided!"
+
+    SMTP_HOST = smtp_data.get("SMTP_HOST", "smtp.gmail.com")
+    SMTP_PORT = smtp_data.get("SMTP_PORT", 587)
+    SMTP_USERNAME = smtp_data.get("SMTP_USERNAME")
+    SMTP_PASSWORD = smtp_data.get("SMTP_PASSWORD")
+
+    if not SMTP_USERNAME or not SMTP_PASSWORD:
+        return "Gmail sending error: SMTP_USERNAME or SMTP_PASSWORD missing!"
+
+    if not recipient:
+        recipient = SMTP_USERNAME
+
+    try:
+        logging.info(f"Connecting to SMTP server {SMTP_HOST}:{SMTP_PORT}...")
+        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
+        server.starttls()
+        logging.info("Starting TLS...")
+        server.login(SMTP_USERNAME, SMTP_PASSWORD)
+        logging.info("SMTP login successful.")
+
+        for i, r in enumerate(reports, start=1):
+            body = json.dumps(r, indent=2, default=lambda o: o.__dict__)
+            msg = MIMEMultipart()
+            msg["From"] = SMTP_USERNAME
+            msg["To"] = recipient
+            msg["Subject"] = subject
+            msg.attach(MIMEText(body, "plain"))
+
+            logging.debug(f"Sending report {i}/{len(reports)} to {recipient}...")
+            server.send_message(msg)
+            r["sent_to_email_at"] = "now"
+            logging.info(f"Report {i} sent.")
+
+        server.quit()
+        logging.info(f"All {len(reports)} reports sent successfully to {recipient}.")
+        return f"[Gmail] {len(reports)} reports sent to {recipient}!"
+
+    except smtplib.SMTPAuthenticationError:
+        logging.exception("SMTP authentication failed.")
+        return "Gmail sending error: authentication failed. Check username/password or use an App Password."
+    except Exception as e:
+        logging.exception("Unexpected error sending Gmail reports.")
+        return f"Gmail sending error: {str(e)}"
+
+
+if __name__ == "__main__":
+    print("Server starting...", flush=True)
+    mcp.run(transport="stdio")

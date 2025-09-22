@@ -1,28 +1,29 @@
 import asyncio
 import json
-from contextlib import AsyncExitStack
-from typing import Any, Dict, List, Optional
+import logging
 import os
 import re
+from contextlib import AsyncExitStack
+from typing import Any, List, Optional, Dict
 
 import nest_asyncio
 from dotenv import load_dotenv
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 import httpx
+from models import Report, MergedInput, Commit, JiraIssue
 
-# Allow nested event loops (Jupyter/IPython)
-nest_asyncio.apply()
 
-# Load environment variables
+# Load environment
 load_dotenv("./.env")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
+nest_asyncio.apply()
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
 
 class MCPGeminiClient:
-    """Client for interacting with Gemini models using MCP tools"""
-
     def __init__(self, model: str = "gemini-2.0-flash"):
         self.session: Optional[ClientSession] = None
         self.exit_stack = AsyncExitStack()
@@ -31,7 +32,6 @@ class MCPGeminiClient:
         self.write: Optional[Any] = None
 
     async def connect_to_server(self, server_script_path: str = "server.py"):
-        """Connect to MCP server via stdio."""
         server_params = StdioServerParameters(command="python", args=[server_script_path])
         stdio_transport = await self.exit_stack.enter_async_context(stdio_client(server_params))
         self.stdio, self.write = stdio_transport
@@ -44,7 +44,6 @@ class MCPGeminiClient:
             print(f"  - {tool.name}: {tool.description}")
 
     async def get_mcp_tools(self) -> List[Dict[str, Any]]:
-        """Return tools in the Gemini-style function format."""
         tools_result = await self.session.list_tools()
         return [
             {
@@ -58,29 +57,12 @@ class MCPGeminiClient:
             for tool in tools_result.tools
         ]
 
-    async def gemini_chat(self, messages: List[Dict[str, str]], tools: Optional[List[Dict]] = None) -> Dict[str, Any]:
-        """Send messages to Gemini and return the assistant response."""
-        # Build system + conversation text (OpenAI-style)
+    async def gemini_chat(self, messages: List[Dict[str, str]]) -> str:
         conversation_text = ""
         for msg in messages:
-            role = msg["role"]
-            content = msg["content"]
-            if role == "system":
-                conversation_text += f"SYSTEM: {content}\n"
-            elif role == "user":
-                conversation_text += f"USER: {content}\n"
-            elif role == "assistant":
-                conversation_text += f"ASSISTANT: {content}\n"
-            elif role == "tool":
-                conversation_text += f"TOOL ({msg.get('tool_call_id', '')}): {content}\n"
+            conversation_text += f"{msg['role'].upper()}: {msg['content']}\n"
 
-        # Include available tools in the system prompt
-        if tools:
-            conversation_text += f"AVAILABLE TOOLS: {json.dumps(tools)}\n"
-
-        payload = {
-            "contents": [{"parts": [{"text": conversation_text}]}]
-        }
+        payload = {"contents": [{"parts": [{"text": conversation_text}]}]}
         headers = {"Content-Type": "application/json", "X-goog-api-key": GEMINI_API_KEY}
 
         async with httpx.AsyncClient(timeout=30) as client:
@@ -88,58 +70,98 @@ class MCPGeminiClient:
             resp.raise_for_status()
             data = resp.json()
 
-        # Extract text from Gemini
         candidate_text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
-        candidate_text_clean = re.sub(r"^```json\s*|\s*```$", "", candidate_text.strip(), flags=re.MULTILINE)
-        return {"content": candidate_text_clean, "raw": data}
+        return re.sub(r"^```json\s*|\s*```$", "", candidate_text.strip(), flags=re.MULTILINE)
 
     async def process_query(self, query: str) -> str:
-        """Process query using Gemini and MCP tools (OpenAI style)."""
-        tools = await self.get_mcp_tools()
-
-        # Initial conversation
         messages = [{"role": "user", "content": query}]
-        assistant_response = await self.gemini_chat(messages, tools)
-        assistant_text = assistant_response["content"]
+        return await self.gemini_chat(messages)
 
-        # Check for tool calls by looking for known tool names in text
-        tool_calls = []
-        for tool in tools:
-            if tool["function"]["name"] in assistant_text:
-                tool_calls.append({
-                    "name": tool["function"]["name"],
-                    "arguments": {}  # optionally parse arguments if structured
-                })
-
-        # If tool calls exist, execute them
-        if tool_calls:
-            for call in tool_calls:
-                result = await self.session.call_tool(call["name"], arguments=call.get("arguments", {}))
-                messages.append({"role": "assistant", "content": assistant_text})
-                messages.append({"role": "tool", "tool_call_id": call.get("name", ""), "content": result.content[0].text})
-
-            # Final Gemini response after tools
-            final_response = await self.gemini_chat(messages, tools)
-            return final_response["content"]
-
-        return assistant_text
+    async def safe_json_load(self, text: str) -> Any:
+        try:
+            return json.loads(text) if text else []
+        except json.JSONDecodeError:
+            logging.warning(f"Failed to decode JSON: {text[:100]}...")
+            return []
 
     async def cleanup(self):
-        """Close resources."""
         await self.exit_stack.aclose()
-
 
 async def main():
     client = MCPGeminiClient()
+    all_reports = []  # collect all reports
+
     try:
         await client.connect_to_server("server.py")
 
-        query = "What is our company's vacation and remote work policy?"
-        # query = "What 1 + 5?"
-        print(f"\nQuery: {query}")
+        # 1) Get all authors
+        authors_res = await client.session.call_tool("get_authors", {})
+        authors_data = json.loads(authors_res.content[0].text) if authors_res.content else []
 
-        response = await client.process_query(query)
-        print(f"\nResponse: {response}")
+        for author in authors_data:
+            name = author.get("name", "UNKNOWN")
+            email = author.get("emails", [None])[0]
+            logging.info(f"Processing author={name}, email={email}")
+
+            # 2) Tickets + commits by email
+            tickets_res = await client.session.call_tool(
+                "get_tickets_and_commits_by_email", {"email": email}
+            )
+            tickets_and_commits_data = json.loads(tickets_res.content[0].text) if tickets_res.content else {}
+
+            logging.info(f"Tickets and commits for {name}: {len(tickets_and_commits_data)}")
+
+            # 3) Build MergedInput object
+            merged_input = MergedInput(
+                email=tickets_and_commits_data.get("email", ""),
+                name=tickets_and_commits_data.get("name", ""),
+                tickets=[JiraIssue(**t) for t in tickets_and_commits_data.get("tickets", [])],
+                regular_commits=[Commit(**c) for c in tickets_and_commits_data.get("regular_commits", [])],
+                overtime_commits=[Commit(**c) for c in tickets_and_commits_data.get("overtime_commits", [])],
+            )
+
+            # 4) Ask Gemini to summarize
+            query = (
+                f"Summarize the following commits and tickets for {name} as a concise report:\n"
+                f"Tickets: {tickets_and_commits_data.get('tickets', [])}\n"
+                f"Regular Commits: {tickets_and_commits_data.get('regular_commits', [])}\n"
+                f"Overtime Commits: {tickets_and_commits_data.get('overtime_commits', [])}\n"
+                "Format strictly as a report."
+            )
+            summary = await client.process_query(query)
+            logging.info(f"Gemini response snippet: {summary[:200].replace(chr(10), ' ')}...")
+
+            # 5) Build final Report object
+            report = Report(
+                developer_email=email,
+                ai_summary=summary,
+                tickets_and_commits=merged_input
+            )
+
+            all_reports.append(report)  # collect report
+            logging.info(f"Report object created for {name}, added to batch.")
+
+        # 6) Save all reports locally
+        save_res = await client.session.call_tool(
+            "save_reports_batch",
+            {"reports": [r.__dict__ for r in all_reports]}
+        )
+        logging.info(f"Save batch result: {save_res.content[0].text if save_res.content else save_res}")
+
+        # 7) Send all reports via Slack
+        slack_res = await client.session.call_tool(
+            "send_reports_batch_slack",
+            {"reports": [r.__dict__ for r in all_reports]}
+        )
+        logging.info(f"Slack send result: {slack_res.content[0].text if slack_res.content else slack_res}")
+
+        # 8) Send all reports via Gmail
+        gmail_res = await client.session.call_tool(
+            "send_reports_batch_gmail",
+            {"reports": [r.__dict__ for r in all_reports]}
+        )
+        logging.info(f"Gmail send result: {gmail_res.content[0].text if gmail_res.content else gmail_res}")
+
     finally:
         await client.cleanup()
 

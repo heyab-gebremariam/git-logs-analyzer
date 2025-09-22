@@ -1,0 +1,3290 @@
+[
+  {
+    "key": "BDEV-509",
+    "summary": "[FE] Purchase Requisition Create/New page crashes",
+    "assignee": "Ayub Ali",
+    "status": "Bug Reports",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-19T15:24:51.741+0300"
+  },
+  {
+    "key": "BDEV-134",
+    "summary": "Lease crud have issue",
+    "assignee": "Shalom",
+    "status": "Blocked",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-19T15:13:02.868+0300"
+  },
+  {
+    "key": "BDEV-116",
+    "summary": "Fix Lease Creation And Detail",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-19T15:07:19.327+0300"
+  },
+  {
+    "key": "BDEV-245",
+    "summary": "Time And Expenses in Sales Module was having problem and implement validation",
+    "assignee": "mikias yonas",
+    "status": "Testing Failed",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T15:01:33.544+0300"
+  },
+  {
+    "key": "BDEV-239",
+    "summary": "Delete functionality for lease",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T14:56:12.877+0300"
+  },
+  {
+    "key": "BDEV-508",
+    "summary": "Lease Payment Collection and Payment",
+    "assignee": "Shalom",
+    "status": "To Do",
+    "reporter": "Shalom",
+    "updated": "2025-09-19T14:54:15.714+0300"
+  },
+  {
+    "key": "BDEV-238",
+    "summary": "Add Name Field to the Lease to specify General Idea and reason for the lease",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T14:30:18.096+0300"
+  },
+  {
+    "key": "BDEV-302",
+    "summary": "implement the modified notes ui from figma ",
+    "assignee": "Shalom",
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-19T11:49:10.519+0300"
+  },
+  {
+    "key": "BDEV-229",
+    "summary": "Implement the logic for importing the models with child item [invoices]",
+    "assignee": "Amanuel Belete",
+    "status": "Testing",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-19T11:48:37.034+0300"
+  },
+  {
+    "key": "BDEV-228",
+    "summary": "Handle import validation after sending the data to the backend. [Header Validation]",
+    "assignee": "Amanuel Belete",
+    "status": "Testing",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-19T11:48:32.664+0300"
+  },
+  {
+    "key": "BDEV-120",
+    "summary": "FE- Implementing the new import feature[sect1]",
+    "assignee": "Amanuel Belete",
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-19T11:48:07.431+0300"
+  },
+  {
+    "key": "BDEV-507",
+    "summary": "[BE] LI journal GL account not being recorded in Journal Entry",
+    "assignee": "Segni Adeba",
+    "status": "Dev Completed",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-19T11:42:15.822+0300"
+  },
+  {
+    "key": "BDEV-397",
+    "summary": "Integrate Service With Payments in Invoice",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T11:32:21.388+0300"
+  },
+  {
+    "key": "BDEV-400",
+    "summary": "Service integration with Purchase Order and Sales Order",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T11:29:53.841+0300"
+  },
+  {
+    "key": "BDEV-506",
+    "summary": "service items are not Filtered all services displayed in goods and services, consulting and contractual",
+    "assignee": null,
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-09-19T11:24:46.890+0300"
+  },
+  {
+    "key": "BDEV-505",
+    "summary": "Lease Payment Trigger Backend",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T11:22:26.926+0300"
+  },
+  {
+    "key": "BDEV-401",
+    "summary": "Service Integration With Payments",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T11:21:01.828+0300"
+  },
+  {
+    "key": "BDEV-374",
+    "summary": "Integrate Service With Payments in Bill ",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T11:15:50.706+0300"
+  },
+  {
+    "key": "BDEV-373",
+    "summary": "CRUD For Service Module With Validation",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T10:33:25.938+0300"
+  },
+  {
+    "key": "BDEV-304",
+    "summary": "FE - Add required documents upload to lease creation",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-19T10:31:39.869+0300"
+  },
+  {
+    "key": "BDEV-402",
+    "summary": "Service Integration With Receipts And Quotes",
+    "assignee": "mikias yonas",
+    "status": "Testing",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T10:27:37.298+0300"
+  },
+  {
+    "key": "BDEV-234",
+    "summary": "journal in purchase order approval issue",
+    "assignee": "Elias Sisay",
+    "status": "Testing",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-19T10:12:08.501+0300"
+  },
+  {
+    "key": "BDEV-494",
+    "summary": "Update Note List UI",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Shalom",
+    "updated": "2025-09-19T10:06:08.975+0300"
+  },
+  {
+    "key": "BDEV-403",
+    "summary": "Note Edit is not functioning",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Shalom",
+    "updated": "2025-09-19T10:05:36.328+0300"
+  },
+  {
+    "key": "BDEV-372",
+    "summary": "[FE] Vendor Creation form is not sending Expense Account and duplicate fields in General and Accounting tabs. Assigned to Hana.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Done",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-19T09:58:11.746+0300"
+  },
+  {
+    "key": "BDEV-406",
+    "summary": "Leaser Tin uniquenes",
+    "assignee": "mikias yonas",
+    "status": "Done",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-19T09:57:49.593+0300"
+  },
+  {
+    "key": "BDEV-454",
+    "summary": "[BE] New Bill import",
+    "assignee": "Segni Adeba",
+    "status": "Testing",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-19T09:40:57.198+0300"
+  },
+  {
+    "key": "BDEV-474",
+    "summary": "[BE] Remove Ensure Location from Company Model",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Done",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:08:24.925+0300"
+  },
+  {
+    "key": "BDEV-122",
+    "summary": "[FE] investigating how to make the frontend modular assuming a modular backend",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-19T08:07:11.983+0300"
+  },
+  {
+    "key": "BDEV-148",
+    "summary": "Shipment Validation: Prevent Same-Warehouse Location Movements",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:06:57.261+0300"
+  },
+  {
+    "key": "BDEV-455",
+    "summary": "Add Location During Asset Item Import (Future)",
+    "assignee": "Heyab G Gebremariam",
+    "status": "In Progress",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:05:08.297+0300"
+  },
+  {
+    "key": "BDEV-475",
+    "summary": "Fix Update Locations Functionality",
+    "assignee": "Heyab G Gebremariam",
+    "status": "In Progress",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:05:04.323+0300"
+  },
+  {
+    "key": "BDEV-392",
+    "summary": "Add Shipment Form in Purchase Order, Bills, and Payment",
+    "assignee": "Heyab G Gebremariam",
+    "status": "In Progress",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:04:55.107+0300"
+  },
+  {
+    "key": "BDEV-382",
+    "summary": "Add Shipment Form in Sales Order, Invoice, and Receipt",
+    "assignee": "Heyab G Gebremariam",
+    "status": "In Progress",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:04:50.665+0300"
+  },
+  {
+    "key": "BDEV-473",
+    "summary": "Ensure Parent Location is valid Parent Location Type",
+    "assignee": "Heyab G Gebremariam",
+    "status": "In Progress",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:04:38.126+0300"
+  },
+  {
+    "key": "BDEV-498",
+    "summary": "Reviewing HR PR",
+    "assignee": "Heyab G Gebremariam",
+    "status": "In Progress",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:04:29.255+0300"
+  },
+  {
+    "key": "BDEV-414",
+    "summary": "Testing the new Import Feature integrating with backend",
+    "assignee": "Amanuel Belete",
+    "status": "Ready For Test",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-19T08:03:56.058+0300"
+  },
+  {
+    "key": "BDEV-493",
+    "summary": "add Functionality of Considering the compony being a Leaser",
+    "assignee": "Shalom",
+    "status": "Ready For Test",
+    "reporter": "Shalom",
+    "updated": "2025-09-19T08:03:38.169+0300"
+  },
+  {
+    "key": "BDEV-407",
+    "summary": "Service Front-end integration",
+    "assignee": "Shalom",
+    "status": "Ready For Test",
+    "reporter": "Shalom",
+    "updated": "2025-09-19T08:03:32.538+0300"
+  },
+  {
+    "key": "BDEV-411",
+    "summary": "Normalize the new import for the backend",
+    "assignee": "Amanuel Belete",
+    "status": "Ready For Test",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-19T08:02:31.150+0300"
+  },
+  {
+    "key": "BDEV-472",
+    "summary": "Add Asset and Inventory Items List in Warehouse Detail Page",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:01:59.888+0300"
+  },
+  {
+    "key": "BDEV-471",
+    "summary": "Add Warehouse and Location Dropdown in Create Inventory Item",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:01:49.707+0300"
+  },
+  {
+    "key": "BDEV-470",
+    "summary": "Add Default Warehouse and Location Tab in Company Settings",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:01:40.318+0300"
+  },
+  {
+    "key": "BDEV-377",
+    "summary": "[FE] Update Locations List, Detail and Form Pages",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:01:29.049+0300"
+  },
+  {
+    "key": "BDEV-139",
+    "summary": "Require Warehouse Selection First in Create Shipment",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-19T08:01:06.510+0300"
+  },
+  {
+    "key": "BDEV-504",
+    "summary": "[FE] New Invoice generated Ref number preview bug",
+    "assignee": null,
+    "status": "Bug Reports",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-18T15:37:31.141+0300"
+  },
+  {
+    "key": "BDEV-503",
+    "summary": "Posting of the Approved supplementary Budget to GL",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T14:46:56.433+0300"
+  },
+  {
+    "key": "BDEV-502",
+    "summary": "Service HIstory display",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-18T14:44:10.074+0300"
+  },
+  {
+    "key": "BDEV-495",
+    "summary": "[BE] Consider the company being the leaser",
+    "assignee": "mikias yonas",
+    "status": "In Progress",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-18T14:43:22.128+0300"
+  },
+  {
+    "key": "BDEV-501",
+    "summary": "The approval of the Supplementary Budget Requests",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T14:35:20.624+0300"
+  },
+  {
+    "key": "BDEV-488",
+    "summary": "Manual Bank Reconciliation",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-09T11:43:12.664+0300"
+  },
+  {
+    "key": "BDEV-487",
+    "summary": "Auto Bank Reconciliation",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-09T11:43:06.593+0300"
+  },
+  {
+    "key": "BDEV-491",
+    "summary": "New Imports For [Customers, ...]",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-08T23:19:12.018+0300"
+  },
+  {
+    "key": "BDEV-413",
+    "summary": "Lease Approval Flow",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:31:10.938+0300"
+  },
+  {
+    "key": "BDEV-286",
+    "summary": "Revisit Approval Flow for Lease",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:31:09.663+0300"
+  },
+  {
+    "key": "BDEV-360",
+    "summary": "Track Database Migration File",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:31:07.495+0300"
+  },
+  {
+    "key": "BDEV-161",
+    "summary": "Unapproved transactions included in reports",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-08T09:31:04.570+0300"
+  },
+  {
+    "key": "BDEV-206",
+    "summary": "[BE] Fix Balance Sheet Report",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-08T09:31:02.000+0300"
+  },
+  {
+    "key": "BDEV-209",
+    "summary": "[BE] Fix Income Statement Report",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-08T09:30:59.862+0300"
+  },
+  {
+    "key": "BDEV-142",
+    "summary": "[BE] Create Budget Supplement: It is responding with Unable to create Budget Supplement",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-08T09:30:57.731+0300"
+  },
+  {
+    "key": "BDEV-444",
+    "summary": "Auto Create Sequence for the company if it doesnt have",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:30:53.745+0300"
+  },
+  {
+    "key": "BDEV-404",
+    "summary": "Add sub_entries for notes detail ",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:30:45.396+0300"
+  },
+  {
+    "key": "BDEV-236",
+    "summary": "Add Document Management/Uploading to Lease Creation",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:30:42.596+0300"
+  },
+  {
+    "key": "BDEV-370",
+    "summary": "[BE] Lessor Fixes (Validation and add document sequencing to it) ",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:30:40.402+0300"
+  },
+  {
+    "key": "BDEV-409",
+    "summary": "CRUD actions for budget adjustment lines",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:30:37.311+0300"
+  },
+  {
+    "key": "BDEV-405",
+    "summary": "[FE] Budget Adjustment should consider line items",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-08T09:30:32.203+0300"
+  },
+  {
+    "key": "BDEV-380",
+    "summary": "[TBD] Integrating Sales Flow with Warehouse Operations",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-08T09:29:28.703+0300"
+  },
+  {
+    "key": "BDEV-492",
+    "summary": "[TBD] Add Asset Items and Inventory Items Tab inside Warehouse Detail Page",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-08T09:27:19.928+0300"
+  },
+  {
+    "key": "BDEV-416",
+    "summary": "Integrate service with line items in purchase modules(PO,Bill,Payment)",
+    "assignee": "Shalom",
+    "status": "Dev Completed",
+    "reporter": "Shalom",
+    "updated": "2025-09-08T09:20:25.029+0300"
+  },
+  {
+    "key": "BDEV-408",
+    "summary": "Service crud",
+    "assignee": "Shalom",
+    "status": "Dev Completed",
+    "reporter": "Shalom",
+    "updated": "2025-09-08T09:20:19.476+0300"
+  },
+  {
+    "key": "BDEV-490",
+    "summary": "[BE] Better Logging",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-05T15:56:50.293+0300"
+  },
+  {
+    "key": "BDEV-151",
+    "summary": "[BE] Import for models with multiple items overhaul",
+    "assignee": "Segni Adeba",
+    "status": "Dev Completed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-05T15:01:50.785+0300"
+  },
+  {
+    "key": "BDEV-489",
+    "summary": "[FE] Service Tasks ",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-05T11:54:25.102+0300"
+  },
+  {
+    "key": "BDEV-469",
+    "summary": "Add Tasks for Service",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-09-05T11:54:19.045+0300"
+  },
+  {
+    "key": "BDEV-457",
+    "summary": "Service Integration into Sales Module",
+    "assignee": "Shalom",
+    "status": "To Do",
+    "reporter": "Shalom",
+    "updated": "2025-09-05T09:49:24.134+0300"
+  },
+  {
+    "key": "BDEV-485",
+    "summary": "[MA] Employee Self Service to apply for leave.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:21:31.299+0300"
+  },
+  {
+    "key": "BDEV-484",
+    "summary": "[MA] Employee Self Service to clock in and clock out.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:21:18.604+0300"
+  },
+  {
+    "key": "BDEV-483",
+    "summary": "[FE] Attendance Report Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:21:11.357+0300"
+  },
+  {
+    "key": "BDEV-482",
+    "summary": "[FE] Timesheet & Timesheet Entry Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:21:09.276+0300"
+  },
+  {
+    "key": "BDEV-381",
+    "summary": "Fix Shipment Approval Issue on Test Server",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T09:20:23.347+0300"
+  },
+  {
+    "key": "BDEV-481",
+    "summary": "[FE] Payroll Run Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:19:50.010+0300"
+  },
+  {
+    "key": "BDEV-480",
+    "summary": "[FE] Employee pay breakdown Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:19:48.186+0300"
+  },
+  {
+    "key": "BDEV-479",
+    "summary": "[FE] Overtime Rate Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:19:46.596+0300"
+  },
+  {
+    "key": "BDEV-478",
+    "summary": "[FE] Tax & Pension Bracket Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:19:41.275+0300"
+  },
+  {
+    "key": "BDEV-477",
+    "summary": "[FE] PayStructure CRUD Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:19:39.566+0300"
+  },
+  {
+    "key": "BDEV-476",
+    "summary": "[FE]-PayComponents CRUD Integration.",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-09-05T09:19:36.949+0300"
+  },
+  {
+    "key": "BDEV-300",
+    "summary": "[FE] Sales Order edit page doesn't load sales order items. Assigned to Mahi",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-05T09:12:55.022+0300"
+  },
+  {
+    "key": "BDEV-393",
+    "summary": "[FE] Wrong error message on a field of Subsidiary creation. Assigned to Mahi.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-05T08:37:46.452+0300"
+  },
+  {
+    "key": "BDEV-390",
+    "summary": "[FE+BE] Show Payment Terms inside Sales Order and Purchase Order. Save them during Create and Update. Assigned to Hana.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T08:33:49.211+0300"
+  },
+  {
+    "key": "BDEV-389",
+    "summary": "[FE] Create Payment Terms List, Form, Detail Pages",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T08:33:36.465+0300"
+  },
+  {
+    "key": "BDEV-388",
+    "summary": "[BE] Create Payment Terms CRUD routes and views",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T08:33:23.270+0300"
+  },
+  {
+    "key": "BDEV-379",
+    "summary": "Updating Move Order (Shipment) Model",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T08:32:58.156+0300"
+  },
+  {
+    "key": "BDEV-378",
+    "summary": "Assigning Default Warehouse and Location for Companies",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T08:32:09.179+0300"
+  },
+  {
+    "key": "BDEV-376",
+    "summary": "Creating Warehouse and Location Models with Default Location Integration",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-09-05T08:31:58.764+0300"
+  },
+  {
+    "key": "BDEV-358",
+    "summary": "[FE] On Receipt creation and update the \"check_no\" field is being sent as number but should be string. Assigned to Mahi.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-05T08:31:34.416+0300"
+  },
+  {
+    "key": "BDEV-468",
+    "summary": "Define Project Structure",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:12:33.058+0300"
+  },
+  {
+    "key": "BDEV-467",
+    "summary": "Provide Multiple Views",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:11:39.298+0300"
+  },
+  {
+    "key": "BDEV-466",
+    "summary": "Implement Kanban Board",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:11:32.380+0300"
+  },
+  {
+    "key": "BDEV-465",
+    "summary": "Implement Central Dashboard",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:11:21.398+0300"
+  },
+  {
+    "key": "BDEV-464",
+    "summary": "Project Automation & Alerts",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:09:13.563+0300"
+  },
+  {
+    "key": "BDEV-463",
+    "summary": "Project Integration Points",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:08:56.799+0300"
+  },
+  {
+    "key": "BDEV-462",
+    "summary": "Project Financial Management",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:08:40.987+0300"
+  },
+  {
+    "key": "BDEV-461",
+    "summary": "Time & Resource Management",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:08:21.899+0300"
+  },
+  {
+    "key": "BDEV-460",
+    "summary": "Project Hierarchy",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:08:10.665+0300"
+  },
+  {
+    "key": "BDEV-459",
+    "summary": "Project Workspace",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:07:55.762+0300"
+  },
+  {
+    "key": "BDEV-458",
+    "summary": "[TBD]Project ",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-09-05T00:07:46.396+0300"
+  },
+  {
+    "key": "BDEV-456",
+    "summary": "Integrate service into purchase module line item(Purchase Requisition, Quotes)",
+    "assignee": "Shalom",
+    "status": "In Review",
+    "reporter": "Shalom",
+    "updated": "2025-09-04T20:00:04.304+0300"
+  },
+  {
+    "key": "BDEV-138",
+    "summary": "Handle Backend Error when the Header validation is failed for the imports",
+    "assignee": "Amanuel Belete",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-04T15:02:41.755+0300"
+  },
+  {
+    "key": "BDEV-246",
+    "summary": "Evaluate Time/ Expense Tickets and report on what is missing and what needs to be implemented to get it ready",
+    "assignee": "Shalom",
+    "status": "In Review",
+    "reporter": "Shalom",
+    "updated": "2025-09-03T12:07:40.166+0300"
+  },
+  {
+    "key": "BDEV-453",
+    "summary": "Testing Bill model with item",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-02T21:24:06.455+0300"
+  },
+  {
+    "key": "BDEV-452",
+    "summary": "Bank Account Reconciliation",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-01T15:39:48.846+0300"
+  },
+  {
+    "key": "BDEV-450",
+    "summary": "Arrange the UI for new Import",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-09-01T09:12:33.677+0300"
+  },
+  {
+    "key": "BDEV-121",
+    "summary": "[BE] worksheets are not filtered by the period selector",
+    "assignee": "Segni Adeba",
+    "status": "Blocked",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:52:28.498+0300"
+  },
+  {
+    "key": "BDEV-417",
+    "summary": "Update the new error row validation for the New Import Feature",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-08-29T14:35:27.591+0300"
+  },
+  {
+    "key": "BDEV-293",
+    "summary": "[FE] Create Customer Business Account field placeholder is wrong. Assigned to Hana.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:27.569+0300"
+  },
+  {
+    "key": "BDEV-190",
+    "summary": "Filter accounts in company setup based on account type",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.563+0300"
+  },
+  {
+    "key": "BDEV-205",
+    "summary": "[BE] period closing should create beginning balance for the next year",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.547+0300"
+  },
+  {
+    "key": "BDEV-233",
+    "summary": "asset integration in purchase moudlules",
+    "assignee": "Elias Sisay",
+    "status": "In Review",
+    "reporter": "Elias Sisay",
+    "updated": "2025-08-29T14:35:27.465+0300"
+  },
+  {
+    "key": "BDEV-204",
+    "summary": "Current period closing and opening validation",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.407+0300"
+  },
+  {
+    "key": "BDEV-187",
+    "summary": "Integrate Address Dropdown inside Locations Form. Assigned to Hana.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.390+0300"
+  },
+  {
+    "key": "BDEV-290",
+    "summary": "[FE] Description field is not being sent on Budget Calendar creation. Assigned to Mahi",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:27.386+0300"
+  },
+  {
+    "key": "BDEV-232",
+    "summary": "asset integration in sales modules",
+    "assignee": "Elias Sisay",
+    "status": "In Review",
+    "reporter": "Elias Sisay",
+    "updated": "2025-08-29T14:35:27.316+0300"
+  },
+  {
+    "key": "BDEV-203",
+    "summary": "Quotes with purchase requisition integration",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.226+0300"
+  },
+  {
+    "key": "BDEV-186",
+    "summary": "[FE] Total costs evaluation on Inventory Adjustment",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.225+0300"
+  },
+  {
+    "key": "BDEV-288",
+    "summary": "[FE] SideNav Search is not working properly. when we search sales it doesn't bring sales module. Assigned to Mahi.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Heyab G Gebremariam",
+    "updated": "2025-08-29T14:35:27.223+0300"
+  },
+  {
+    "key": "BDEV-231",
+    "summary": "[FE] Inside Sales and Purchase Flow: we should show taxes before invoice or bill is approved",
+    "assignee": "Elias Sisay",
+    "status": "Ready For Test",
+    "reporter": "Elias Sisay",
+    "updated": "2025-08-29T14:35:27.159+0300"
+  },
+  {
+    "key": "BDEV-410",
+    "summary": "Leave intgration",
+    "assignee": "Elias Sisay",
+    "status": "In Progress",
+    "reporter": "Elias Sisay",
+    "updated": "2025-08-29T14:35:27.102+0300"
+  },
+  {
+    "key": "BDEV-202",
+    "summary": "Purchase order with quotes integration :",
+    "assignee": "Elias Sisay",
+    "status": "In Review",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.039+0300"
+  },
+  {
+    "key": "BDEV-183",
+    "summary": "Auto-generate beginning balances after closing period",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.038+0300"
+  },
+  {
+    "key": "BDEV-155",
+    "summary": "[BE] The column inside BusinessAccount called GeneralLedger should be renamed to Ledger",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:27.038+0300"
+  },
+  {
+    "key": "BDEV-384",
+    "summary": "Add Lessor document sequencing fix create redirect to lease detail issue",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Shalom",
+    "updated": "2025-08-29T14:35:27.004+0300"
+  },
+  {
+    "key": "BDEV-230",
+    "summary": "[FE] Inside line items: when quantity is changed, the before tax value must be updated as well",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Elias Sisay",
+    "updated": "2025-08-29T14:35:26.988+0300"
+  },
+  {
+    "key": "BDEV-175",
+    "summary": "Post asset acquisitions and depreciation to GL",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.874+0300"
+  },
+  {
+    "key": "BDEV-182",
+    "summary": "Ensure reports fetch all data from General Ledger module",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.865+0300"
+  },
+  {
+    "key": "BDEV-125",
+    "summary": "[BE] Create standard response payload format/shape for data just like the GeneralError type, the current formats are inconsistent",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.864+0300"
+  },
+  {
+    "key": "BDEV-308",
+    "summary": "Departments & Job Positions",
+    "assignee": "Elias Sisay",
+    "status": "In Progress",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-29T14:35:26.856+0300"
+  },
+  {
+    "key": "BDEV-201",
+    "summary": "[BE] Trial Balance import not being reflected in Company Settings Beginning Balance and Beginning Balance Report",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.686+0300"
+  },
+  {
+    "key": "BDEV-415",
+    "summary": "[BE] Warehouse name should be unique per company only, not the whole table.",
+    "assignee": "Segni Adeba",
+    "status": "Dev Completed",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:26.680+0300"
+  },
+  {
+    "key": "BDEV-398",
+    "summary": "Parsing the date string to the required formatting when parsing",
+    "assignee": "Amanuel Belete",
+    "status": "In Progress",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-08-29T14:35:26.577+0300"
+  },
+  {
+    "key": "BDEV-200",
+    "summary": "[FE] When 2 LOV segments are next to each other the second one makes the first it's parent even though there's there isn't that kind of relationship",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.524+0300"
+  },
+  {
+    "key": "BDEV-128",
+    "summary": "[BE] Return proper errors if company settings are not set",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.516+0300"
+  },
+  {
+    "key": "BDEV-299",
+    "summary": "Supplementary Budget",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-08-29T14:35:26.508+0300"
+  },
+  {
+    "key": "BDEV-212",
+    "summary": "[BE] Accurately assign \"outflow\" and \"inflow\" for generated annual CFF worksheets",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.461+0300"
+  },
+  {
+    "key": "BDEV-396",
+    "summary": "Display the row validation on the table",
+    "assignee": "Amanuel Belete",
+    "status": "In Progress",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-08-29T14:35:26.417+0300"
+  },
+  {
+    "key": "BDEV-198",
+    "summary": "Inventory Item Adjustment Approval Issue (Show appropriate error message related to allowed amounts in approval)",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.340+0300"
+  },
+  {
+    "key": "BDEV-242",
+    "summary": "[BE] Delete routes resource not found error handling mistakes",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:26.327+0300"
+  },
+  {
+    "key": "BDEV-180",
+    "summary": "Refactor dashboard to use General Ledger as data source",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.324+0300"
+  },
+  {
+    "key": "BDEV-211",
+    "summary": "[BE] Accurately assign year for generated annual CFF worksheets",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.294+0300"
+  },
+  {
+    "key": "BDEV-395",
+    "summary": "[BE]Quote creation for asset Item is displaying error",
+    "assignee": "Elias Sisay",
+    "status": "In Review",
+    "reporter": "Elias Sisay",
+    "updated": "2025-08-29T14:35:26.200+0300"
+  },
+  {
+    "key": "BDEV-297",
+    "summary": "Add Lease Name field",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Shalom",
+    "updated": "2025-08-29T14:35:26.172+0300"
+  },
+  {
+    "key": "BDEV-210",
+    "summary": "[BE] Devops Automation for finance backend",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.131+0300"
+  },
+  {
+    "key": "BDEV-291",
+    "summary": "[BE] Update Fiscal Budget, Budget Ceiling validation to use the new format",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:26.116+0300"
+  },
+  {
+    "key": "BDEV-195",
+    "summary": "Add Payment Term and Discount Term to Company Settings",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.113+0300"
+  },
+  {
+    "key": "BDEV-179",
+    "summary": "Enable automatic quote generation from Purchase Requisitions",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:26.112+0300"
+  },
+  {
+    "key": "BDEV-447",
+    "summary": "Time & Expense Module",
+    "assignee": null,
+    "status": "Bug Reports",
+    "reporter": "tekleabhhadush",
+    "updated": "2025-08-29T14:35:26.050+0300"
+  },
+  {
+    "key": "BDEV-295",
+    "summary": "Imported excel should display the table for the selected category",
+    "assignee": "Amanuel Belete",
+    "status": "Ready For Test",
+    "reporter": "Amanuel Belete",
+    "updated": "2025-08-29T14:35:25.999+0300"
+  },
+  {
+    "key": "BDEV-240",
+    "summary": "[FE] Project Detail page GET transaction items 404.",
+    "assignee": "Elias Sisay",
+    "status": "In Progress",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:25.985+0300"
+  },
+  {
+    "key": "BDEV-207",
+    "summary": "[BE] Validation for Payroll",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:25.982+0300"
+  },
+  {
+    "key": "BDEV-193",
+    "summary": "Fix PO duplication when selecting the same quote multiple times",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:25.967+0300"
+  },
+  {
+    "key": "BDEV-131",
+    "summary": "[BE] Incorrect logic in Inventory Item cost calculations",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:25.952+0300"
+  },
+  {
+    "key": "BDEV-185",
+    "summary": "Auto-generate sequential reference number for inventory adjustments",
+    "assignee": "Segni Adeba",
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.985+0300"
+  },
+  {
+    "key": "BDEV-174",
+    "summary": "Missing success/error alert after creating project",
+    "assignee": "Elias Sisay",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.976+0300"
+  },
+  {
+    "key": "BDEV-154",
+    "summary": "[FE] company settings: payroll tab doesn't show the backend errors correctly",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.937+0300"
+  },
+  {
+    "key": "BDEV-8",
+    "summary": "Payroll Management",
+    "assignee": "Ayub Ali",
+    "status": "In Progress",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-29T14:35:24.934+0300"
+  },
+  {
+    "key": "BDEV-117",
+    "summary": "[FE] Adding Access Guard to Budget Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.911+0300"
+  },
+  {
+    "key": "BDEV-152",
+    "summary": "Add Budget worksheet disabled because of approval flow issues",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.773+0300"
+  },
+  {
+    "key": "BDEV-6",
+    "summary": "Timesheet Management",
+    "assignee": "Ayub Ali",
+    "status": "In Progress",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-29T14:35:24.751+0300"
+  },
+  {
+    "key": "BDEV-173",
+    "summary": "Error when creating Time and Expense Ticket entry",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.734+0300"
+  },
+  {
+    "key": "BDEV-133",
+    "summary": "[FE] Add document sequencing option for Lease (Make the Prefix 'LS')",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.733+0300"
+  },
+  {
+    "key": "BDEV-130",
+    "summary": "[BE] No input DTOs on Create and Update route handlers",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.715+0300"
+  },
+  {
+    "key": "BDEV-143",
+    "summary": "Creating Bills using Asset Class is not working: Price becomes zero",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.712+0300"
+  },
+  {
+    "key": "BDEV-119",
+    "summary": "Budget Adjustment should consider available amount from source posted budget",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.594+0300"
+  },
+  {
+    "key": "BDEV-7",
+    "summary": "Employee Management",
+    "assignee": "Ayub Ali",
+    "status": "In Progress",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-29T14:35:24.576+0300"
+  },
+  {
+    "key": "BDEV-243",
+    "summary": "[BE] Company Injector middleware should also check if the user is a member of the mentioned company not just the company's existence",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:24.575+0300"
+  },
+  {
+    "key": "BDEV-137",
+    "summary": "[BE] update the KFF value validation to use the latest LOV implementation",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.567+0300"
+  },
+  {
+    "key": "BDEV-172",
+    "summary": "Update failure when editing Purchase Order",
+    "assignee": "Elias Sisay",
+    "status": "In Progress",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.563+0300"
+  },
+  {
+    "key": "BDEV-150",
+    "summary": "Integrate Address drop-downs instead of writing in text on Leases Lessor , and basic validations for all lease and leaser fields on edit and create",
+    "assignee": "Shalom",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.445+0300"
+  },
+  {
+    "key": "BDEV-298",
+    "summary": "Budget Adjustment should consider multiple adjustments at one go",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-08-29T14:35:24.432+0300"
+  },
+  {
+    "key": "BDEV-171",
+    "summary": "Asset name field allows random or invalid characters",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.423+0300"
+  },
+  {
+    "key": "BDEV-127",
+    "summary": "[BE] Remove ctx context.Context arguments from route handler definitions",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.413+0300"
+  },
+  {
+    "key": "BDEV-424",
+    "summary": "creating quote for asset Item",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:24.393+0300"
+  },
+  {
+    "key": "BDEV-149",
+    "summary": "[FE] Integrate Address Dropdown inside Employee",
+    "assignee": "Amanuel Belete",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.295+0300"
+  },
+  {
+    "key": "BDEV-126",
+    "summary": "[BE] Create DTOs for response payloads to trim down their size and only return what's necessary to the FE",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.250+0300"
+  },
+  {
+    "key": "BDEV-167",
+    "summary": "GL fields for asset posting require validation",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.245+0300"
+  },
+  {
+    "key": "BDEV-423",
+    "summary": "Asset Item purchase process",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:24.222+0300"
+  },
+  {
+    "key": "BDEV-147",
+    "summary": "[FE] Inside line items: when quantity is changed, the before tax value must be updated as well",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.126+0300"
+  },
+  {
+    "key": "BDEV-166",
+    "summary": "Notification action buttons not working for budget workflow",
+    "assignee": "Shalom",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.087+0300"
+  },
+  {
+    "key": "BDEV-168",
+    "summary": "No validation between acquisition and re-evaluation dates in asset class",
+    "assignee": "Segni Adeba",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.081+0300"
+  },
+  {
+    "key": "BDEV-124",
+    "summary": "[FE] bill and payment access guard is not checking approval flow",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:24.081+0300"
+  },
+  {
+    "key": "BDEV-422",
+    "summary": "Purchase OverView issue",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:24.058+0300"
+  },
+  {
+    "key": "BDEV-140",
+    "summary": "[FE] Delete button in Inventory Item detail page doesn't do anything. Assigned to Hana.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.949+0300"
+  },
+  {
+    "key": "BDEV-165",
+    "summary": "Worksheet lines can exceed overall budget without warning",
+    "assignee": "Shalom",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.908+0300"
+  },
+  {
+    "key": "BDEV-123",
+    "summary": "[FE] Investigate Calendar Selector: It is not correctly changing the years",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.906+0300"
+  },
+  {
+    "key": "BDEV-421",
+    "summary": "Asset class Acquisition and  Revaluation Date issue",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:23.897+0300"
+  },
+  {
+    "key": "BDEV-399",
+    "summary": "[BE] Add a DB constraint to only allow one open Period Control per company at a time",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-29T14:35:23.700+0300"
+  },
+  {
+    "key": "BDEV-162",
+    "summary": "Beginning balance report shows current period instead of correct starting period",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.699+0300"
+  },
+  {
+    "key": "BDEV-420",
+    "summary": "Asset Item page Issue",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:23.695+0300"
+  },
+  {
+    "key": "BDEV-141",
+    "summary": "[BE] Create Budget Adjustment: It is responding with Unable to create Budget Adjustment",
+    "assignee": "mikias yonas",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.583+0300"
+  },
+  {
+    "key": "BDEV-160",
+    "summary": "Approval Flow Issue on budget worksheet : initializing approval flow not working due to missing consolidation starting step",
+    "assignee": "mikias yonas",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.524+0300"
+  },
+  {
+    "key": "BDEV-136",
+    "summary": "Researching the new import",
+    "assignee": "Amanuel Belete",
+    "status": "Done",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.514+0300"
+  },
+  {
+    "key": "BDEV-129",
+    "summary": "[BE] Actions other than View on resources cannot be done outside the active/current period",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.513+0300"
+  },
+  {
+    "key": "BDEV-419",
+    "summary": "Purchase order creation : before tax value set to zero, Total is empty",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:23.507+0300"
+  },
+  {
+    "key": "BDEV-418",
+    "summary": "Partial Bill creation for received purchase order setting remaining number to zero issue",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T14:35:23.276+0300"
+  },
+  {
+    "key": "BDEV-5",
+    "summary": "Leave Request Management",
+    "assignee": "Elias Sisay",
+    "status": "In Progress",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-29T14:35:23.257+0300"
+  },
+  {
+    "key": "BDEV-135",
+    "summary": "[FE] Changing companies should redirect to a list view or another page if the current page is viewing a specific resource or sub-resource. Assigned to Hana.",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Ready For Test",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.256+0300"
+  },
+  {
+    "key": "BDEV-118",
+    "summary": "[BE] Payroll Run returns code 500 error",
+    "assignee": "Segni Adeba",
+    "status": "Bug Reports",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.256+0300"
+  },
+  {
+    "key": "BDEV-156",
+    "summary": "The Payrol page has a column PayrolId that is empty, if this id is just a uuid or if it is not needed to be shown best to remove the column",
+    "assignee": "Shalom",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T14:35:23.254+0300"
+  },
+  {
+    "key": "BDEV-449",
+    "summary": "Project",
+    "assignee": null,
+    "status": "Bug Reports",
+    "reporter": "tekleabhhadush",
+    "updated": "2025-08-29T11:42:21.670+0300"
+  },
+  {
+    "key": "BDEV-448",
+    "summary": "Payroll",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "tekleabhhadush",
+    "updated": "2025-08-29T11:12:08.748+0300"
+  },
+  {
+    "key": "BDEV-412",
+    "summary": "Purchase order creation : before tax value set to zero, Total value is empty",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Bug Reports",
+    "reporter": "lidiya",
+    "updated": "2025-08-28T14:53:28.769+0300"
+  },
+  {
+    "key": "BDEV-394",
+    "summary": "[BE] input DTO for Subsidiary",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-21T15:42:53.674+0300"
+  },
+  {
+    "key": "BDEV-391",
+    "summary": "[BE] input DTO for Segment",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-21T14:51:19.650+0300"
+  },
+  {
+    "key": "BDEV-145",
+    "summary": "[FE] Add correct percentage calculation to projects",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:41:31.949+0300"
+  },
+  {
+    "key": "BDEV-196",
+    "summary": "Enable project list sorting by progress (Pending, Hold, etc.)",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:41:03.315+0300"
+  },
+  {
+    "key": "BDEV-144",
+    "summary": "[FE] Projects integration: sales and purchase flow must be created by checking project status",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:40:22.827+0300"
+  },
+  {
+    "key": "BDEV-296",
+    "summary": "Apply database migration tracking for clean and proper database migration flow",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-08-21T11:37:52.169+0300"
+  },
+  {
+    "key": "BDEV-188",
+    "summary": "Implement quote term durations and automatic expiration handling",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:26:18.218+0300"
+  },
+  {
+    "key": "BDEV-194",
+    "summary": "Relocate Chart of Account configuration to All Setup options",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:24:46.698+0300"
+  },
+  {
+    "key": "BDEV-184",
+    "summary": "Ensure asset availability for all existing companies",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:24:32.944+0300"
+  },
+  {
+    "key": "BDEV-178",
+    "summary": "Enable linking Purchase Orders to existing approved Quotes",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:24:19.818+0300"
+  },
+  {
+    "key": "BDEV-176",
+    "summary": "Convert purchased items into fixed assets upon receipt",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:23:46.688+0300"
+  },
+  {
+    "key": "BDEV-170",
+    "summary": "Asset class search and filter return all results: Filters and search fail in asset class list view",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:23:24.244+0300"
+  },
+  {
+    "key": "BDEV-169",
+    "summary": "Asset Item search and filter return all results: Filters and search fail in  list view",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:23:10.913+0300"
+  },
+  {
+    "key": "BDEV-158",
+    "summary": "Period check exception models [employee]",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:22:58.624+0300"
+  },
+  {
+    "key": "BDEV-157",
+    "summary": "Clicking on notifications has a flashing error \"error fetching notifications\" that disapears as the page goes to the notification page",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:22:42.365+0300"
+  },
+  {
+    "key": "BDEV-189",
+    "summary": "Validate invoice date against payment term rules for due date and penalties",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:21:49.839+0300"
+  },
+  {
+    "key": "BDEV-387",
+    "summary": "[BE] input DTO for Payment",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-21T11:21:29.452+0300"
+  },
+  {
+    "key": "BDEV-191",
+    "summary": "Display active invitation link tied to company role",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-21T11:21:25.571+0300"
+  },
+  {
+    "key": "BDEV-386",
+    "summary": "[BE] input DTO for Bill",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-20T17:39:15.082+0300"
+  },
+  {
+    "key": "BDEV-385",
+    "summary": "[BE] input DTO for Purchase Order",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-20T16:01:35.673+0300"
+  },
+  {
+    "key": "BDEV-383",
+    "summary": "[BE] input DTO for quote",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-20T15:53:47.360+0300"
+  },
+  {
+    "key": "BDEV-375",
+    "summary": "[BE] input DTO for purchase requisition",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-20T11:43:49.075+0300"
+  },
+  {
+    "key": "BDEV-371",
+    "summary": "[BE] input DTO for Vendor",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-20T11:23:42.066+0300"
+  },
+  {
+    "key": "BDEV-359",
+    "summary": "[BE] input DTO for Time Expense Ticket ",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-19T15:24:10.304+0300"
+  },
+  {
+    "key": "BDEV-357",
+    "summary": "[BE] input DTO for Receipt",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-19T14:30:21.178+0300"
+  },
+  {
+    "key": "BDEV-307",
+    "summary": "[FE] - Leave Application CRUD",
+    "assignee": "Elias Sisay",
+    "status": "In Review",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-19T11:11:16.834+0300"
+  },
+  {
+    "key": "BDEV-219",
+    "summary": "Service Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-19T10:31:16.239+0300"
+  },
+  {
+    "key": "BDEV-306",
+    "summary": "[FE] - Leave Dashboard",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-19T10:10:33.134+0300"
+  },
+  {
+    "key": "BDEV-305",
+    "summary": "[FE] - HR Leave Type Configurations",
+    "assignee": "Elias Sisay",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-19T10:10:14.975+0300"
+  },
+  {
+    "key": "BDEV-312",
+    "summary": "[BE] input DTO for Invoice",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-19T09:45:37.066+0300"
+  },
+  {
+    "key": "BDEV-301",
+    "summary": "[BE] input DTO for Sales Order",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-19T09:07:27.528+0300"
+  },
+  {
+    "key": "BDEV-311",
+    "summary": "[FE] - Build Transfer and Promotion UI",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-18T16:24:22.393+0300"
+  },
+  {
+    "key": "BDEV-310",
+    "summary": "[FE] - Create Job Position Management UI",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-18T16:21:16.091+0300"
+  },
+  {
+    "key": "BDEV-309",
+    "summary": "[FE] - Implement Department Management UI",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-18T16:19:19.306+0300"
+  },
+  {
+    "key": "BDEV-294",
+    "summary": "[BE] input DTO for Customer",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-18T10:38:35.286+0300"
+  },
+  {
+    "key": "BDEV-287",
+    "summary": "Edit time/expense ticket",
+    "assignee": "Shalom",
+    "status": "In Review",
+    "reporter": "Shalom",
+    "updated": "2025-08-15T16:54:45.175+0300"
+  },
+  {
+    "key": "BDEV-292",
+    "summary": "[BE] input DTO for Budget Ceiling",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-15T16:14:41.083+0300"
+  },
+  {
+    "key": "BDEV-289",
+    "summary": "[BE] input DTO for Fiscal Budget (Budget Calendar)",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-15T14:39:11.625+0300"
+  },
+  {
+    "key": "BDEV-3",
+    "summary": "Jira Migrated Tasks",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-15T00:55:08.197+0300"
+  },
+  {
+    "key": "BDEV-273",
+    "summary": "General Frontend Tasks",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-15T00:35:20.253+0300"
+  },
+  {
+    "key": "BDEV-272",
+    "summary": "General Backend Tasks",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-15T00:34:34.050+0300"
+  },
+  {
+    "key": "BDEV-227",
+    "summary": "Consider multiple budgets on one budget supplement go",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-08-15T00:32:40.973+0300"
+  },
+  {
+    "key": "BDEV-226",
+    "summary": "Consider Adding multiple budgets on one budget Adjustment a once",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-08-15T00:32:40.549+0300"
+  },
+  {
+    "key": "BDEV-247",
+    "summary": "Integration",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-15T00:16:33.761+0300"
+  },
+  {
+    "key": "BDEV-199",
+    "summary": "[FE] Update pages: business account search field un-setting issue",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T16:42:20.181+0300"
+  },
+  {
+    "key": "BDEV-197",
+    "summary": "Test onboarding workflow using multiple user roles on test server",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T16:42:06.105+0300"
+  },
+  {
+    "key": "BDEV-244",
+    "summary": "[BE] input DTO for asset class",
+    "assignee": "Segni Adeba",
+    "status": "Ready For Test",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-14T16:16:00.713+0300"
+  },
+  {
+    "key": "BDEV-159",
+    "summary": "Evaluate Time/ Expense Tickets and report on what is missing and what needs to be implemented to get it ready",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T12:55:26.957+0300"
+  },
+  {
+    "key": "BDEV-241",
+    "summary": "[BE] Workflow should only include approval flows relevant to a segment, a each segment can have it's own workflow",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Segni Adeba",
+    "updated": "2025-08-14T12:55:04.426+0300"
+  },
+  {
+    "key": "BDEV-153",
+    "summary": "[TBD] create purchase order: if vendor has quotes and quotes is not selected it says invalid UUID length",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T08:45:09.651+0300"
+  },
+  {
+    "key": "BDEV-237",
+    "summary": "Create Relationship with Asset so we know which asset we are talking about",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "mikias yonas",
+    "updated": "2025-08-14T08:41:39.417+0300"
+  },
+  {
+    "key": "BDEV-235",
+    "summary": "Lease Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T13:47:06.599+0300"
+  },
+  {
+    "key": "BDEV-220",
+    "summary": "Asset  Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T13:16:27.822+0300"
+  },
+  {
+    "key": "BDEV-215",
+    "summary": "Sales Modules",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T11:35:25.029+0300"
+  },
+  {
+    "key": "BDEV-225",
+    "summary": "Tax and TAS Integration",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:50:14.945+0300"
+  },
+  {
+    "key": "BDEV-224",
+    "summary": "Imports",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:49:33.424+0300"
+  },
+  {
+    "key": "BDEV-223",
+    "summary": "User, Role, and Permission Management",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:49:15.210+0300"
+  },
+  {
+    "key": "BDEV-222",
+    "summary": "Company Setting",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:48:48.685+0300"
+  },
+  {
+    "key": "BDEV-221",
+    "summary": "Reports",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:48:40.847+0300"
+  },
+  {
+    "key": "BDEV-218",
+    "summary": "Warehouse and Inventory Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:47:43.953+0300"
+  },
+  {
+    "key": "BDEV-217",
+    "summary": "Budget Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:45:54.881+0300"
+  },
+  {
+    "key": "BDEV-216",
+    "summary": "Accounting Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:45:45.067+0300"
+  },
+  {
+    "key": "BDEV-214",
+    "summary": "Purchase Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:45:35.897+0300"
+  },
+  {
+    "key": "BDEV-213",
+    "summary": "Project Management Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T10:45:24.560+0300"
+  },
+  {
+    "key": "BDEV-10",
+    "summary": "Frontend — “Update Employee Page UI”",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-13T00:52:44.907+0300"
+  },
+  {
+    "key": "BDEV-9",
+    "summary": "Backend — “Update employee Models and views”",
+    "assignee": "Ayub Ali",
+    "status": "To Do",
+    "reporter": "Ayub Ali",
+    "updated": "2025-08-13T00:52:44.713+0300"
+  },
+  {
+    "key": "BDEV-4",
+    "summary": "HRM Module",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-13T00:52:43.491+0300"
+  },
+  {
+    "key": "BDEV-500",
+    "summary": "The Recommendation of the supplementary budget",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T13:43:41.568+0300"
+  },
+  {
+    "key": "BDEV-499",
+    "summary": "The Preparation of the Supplementary Budget Request",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T11:46:55.672+0300"
+  },
+  {
+    "key": "BDEV-446",
+    "summary": "Budget Module with Service Management",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T10:57:32.751+0300"
+  },
+  {
+    "key": "BDEV-445",
+    "summary": "Budget Module Integration with Payment",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T10:57:28.557+0300"
+  },
+  {
+    "key": "BDEV-255",
+    "summary": "Payroll Module Integration Budget",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:57:13.122+0300"
+  },
+  {
+    "key": "BDEV-256",
+    "summary": "Inventory Module Integration with Purchase",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:56:52.415+0300"
+  },
+  {
+    "key": "BDEV-257",
+    "summary": "Inventory Module Integration with Budget",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:56:47.728+0300"
+  },
+  {
+    "key": "BDEV-258",
+    "summary": "Purchase Module Integration with Inventory",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:56:41.479+0300"
+  },
+  {
+    "key": "BDEV-259",
+    "summary": "Purchase Module Integration with Asset",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:56:33.623+0300"
+  },
+  {
+    "key": "BDEV-260",
+    "summary": "Purchase Module Integration with General Ledger",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:55:56.868+0300"
+  },
+  {
+    "key": "BDEV-261",
+    "summary": "Purchase Module Integration with Payroll",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:55:47.180+0300"
+  },
+  {
+    "key": "BDEV-262",
+    "summary": "Purchase Module Integration with Inventory",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:55:42.192+0300"
+  },
+  {
+    "key": "BDEV-263",
+    "summary": "Purchase Module Integration with Budget",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:55:37.077+0300"
+  },
+  {
+    "key": "BDEV-264",
+    "summary": "Cash Management Integration with General Ledger",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:55:31.945+0300"
+  },
+  {
+    "key": "BDEV-265",
+    "summary": "Cash Management Integration with Purchase",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:55:24.678+0300"
+  },
+  {
+    "key": "BDEV-254",
+    "summary": "Payroll Module Integration with Purchase",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:54:44.462+0300"
+  },
+  {
+    "key": "BDEV-253",
+    "summary": "Payroll Module Integration with General Ledger",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:54:36.742+0300"
+  },
+  {
+    "key": "BDEV-252",
+    "summary": "Sales Module Integration with General ledger",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:54:24.344+0300"
+  },
+  {
+    "key": "BDEV-251",
+    "summary": "Fixed Asset Module Integration with Purchase",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:54:14.375+0300"
+  },
+  {
+    "key": "BDEV-250",
+    "summary": "Fixed Asset Module Integration with Inventory",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:54:03.678+0300"
+  },
+  {
+    "key": "BDEV-266",
+    "summary": "Cash Management Integration with Budget",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:53:41.930+0300"
+  },
+  {
+    "key": "BDEV-267",
+    "summary": "Budget Module Integration with interface",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:53:29.813+0300"
+  },
+  {
+    "key": "BDEV-268",
+    "summary": "Budget Module Integration with Cash Management",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:53:21.116+0300"
+  },
+  {
+    "key": "BDEV-269",
+    "summary": "Budget Module Integration with HR",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:53:12.022+0300"
+  },
+  {
+    "key": "BDEV-249",
+    "summary": "Fixed Asset Module Integration with General Ledger (Accounting)",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:52:52.203+0300"
+  },
+  {
+    "key": "BDEV-270",
+    "summary": "Budget Module Integration with Financials (Sales and Purchase)",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:52:29.747+0300"
+  },
+  {
+    "key": "BDEV-271",
+    "summary": "Budget Module Integration with General Ledger",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:52:08.610+0300"
+  },
+  {
+    "key": "BDEV-443",
+    "summary": "Budget Module Integration with Lease",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Biruk Zegeye",
+    "updated": "2025-09-18T10:51:30.546+0300"
+  },
+  {
+    "key": "BDEV-248",
+    "summary": "General Ledger (Accounting) module Integration with All Modules",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-09-18T10:51:10.560+0300"
+  },
+  {
+    "key": "BDEV-497",
+    "summary": "[BE] Sales flow docs and minor improvements",
+    "assignee": "Segni Adeba",
+    "status": "In Progress",
+    "reporter": "Segni Adeba",
+    "updated": "2025-09-18T10:33:45.013+0300"
+  },
+  {
+    "key": "BDEV-427",
+    "summary": "Warehouse Management sub-Module with Accounting",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:17:08.179+0300"
+  },
+  {
+    "key": "BDEV-428",
+    "summary": "Warehouse Management sub- module with Shipment",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:58.126+0300"
+  },
+  {
+    "key": "BDEV-429",
+    "summary": "Lease Management Module with Asset Management Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:50.711+0300"
+  },
+  {
+    "key": "BDEV-430",
+    "summary": "Lease management with Purchase Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:42.826+0300"
+  },
+  {
+    "key": "BDEV-431",
+    "summary": "Lease Management with HRM module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:34.737+0300"
+  },
+  {
+    "key": "BDEV-432",
+    "summary": "Lease Management with Project management",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:26.440+0300"
+  },
+  {
+    "key": "BDEV-433",
+    "summary": "Lease Management with Sales Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:17.955+0300"
+  },
+  {
+    "key": "BDEV-434",
+    "summary": "Service management with Sales Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:09.963+0300"
+  },
+  {
+    "key": "BDEV-435",
+    "summary": "Service Management with Accounting Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:16:02.290+0300"
+  },
+  {
+    "key": "BDEV-436",
+    "summary": "Service Management with Inventory Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:15:53.562+0300"
+  },
+  {
+    "key": "BDEV-437",
+    "summary": "Service Management with Purchase Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:15:43.862+0300"
+  },
+  {
+    "key": "BDEV-438",
+    "summary": "Service Management with Human Resource Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:15:34.858+0300"
+  },
+  {
+    "key": "BDEV-439",
+    "summary": "Service Management with Project Management Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:14:09.442+0300"
+  },
+  {
+    "key": "BDEV-440",
+    "summary": "HRM Management with Accounting Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:14:01.558+0300"
+  },
+  {
+    "key": "BDEV-441",
+    "summary": "HRM Management with Purchase module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:13:54.572+0300"
+  },
+  {
+    "key": "BDEV-442",
+    "summary": "HRM Management with Sales Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:13:42.930+0300"
+  },
+  {
+    "key": "BDEV-426",
+    "summary": "Warehouse management Sub-module with Purchase module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:12:22.504+0300"
+  },
+  {
+    "key": "BDEV-425",
+    "summary": "Warehouse management sub-module with Sales Module",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-18T10:11:41.269+0300"
+  },
+  {
+    "key": "BDEV-496",
+    "summary": "Add Payment History on Service",
+    "assignee": "Shalom",
+    "status": "To Do",
+    "reporter": "Shalom",
+    "updated": "2025-09-17T09:55:40.634+0300"
+  },
+  {
+    "key": "BDEV-451",
+    "summary": "Bank Account Reconciliation",
+    "assignee": "Heyab G Gebremariam",
+    "status": "To Do",
+    "reporter": "Eskender Bekele",
+    "updated": "2025-09-09T11:43:16.978+0300"
+  },
+  {
+    "key": "BT-65",
+    "summary": "purchase requisition edit and view issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:16:41.955+0300"
+  },
+  {
+    "key": "BT-51",
+    "summary": "inventory item creation issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:13:41.066+0300"
+  },
+  {
+    "key": "BT-52",
+    "summary": "service item creation issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:13:39.526+0300"
+  },
+  {
+    "key": "BT-64",
+    "summary": "integration between quotes and purchase requisition issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:13:17.712+0300"
+  },
+  {
+    "key": "BT-62",
+    "summary": "create bill based on received purchase order item list issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:12:56.655+0300"
+  },
+  {
+    "key": "BT-61",
+    "summary": "integration between bill and payment issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:12:52.742+0300"
+  },
+  {
+    "key": "BT-56",
+    "summary": "verify inventory item creation",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:11:47.255+0300"
+  },
+  {
+    "key": "BT-54",
+    "summary": "inventory and  service item-location",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T11:11:40.370+0300"
+  },
+  {
+    "key": "BT-86",
+    "summary": "Payroll",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "tekleabhhadush",
+    "updated": "2025-08-29T11:03:33.052+0300"
+  },
+  {
+    "key": "BT-85",
+    "summary": "Human Resources",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "tekleabhhadush",
+    "updated": "2025-08-29T10:59:13.917+0300"
+  },
+  {
+    "key": "BT-49",
+    "summary": "Sale Orders – Line Items Missing After Creation, Edit Fails with Internal Server Error",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:52:37.070+0300"
+  },
+  {
+    "key": "BT-84",
+    "summary": "unresposive \"submit\" button on asset class, inventory and service create pages",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T10:51:04.793+0300"
+  },
+  {
+    "key": "BT-33",
+    "summary": "Payroll – Missing Deductions and Benefit Calculations",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:48:17.070+0300"
+  },
+  {
+    "key": "BT-30",
+    "summary": "Sales - Customer Import Validation",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:47:34.346+0300"
+  },
+  {
+    "key": "BT-34",
+    "summary": "Employee Module – Edit and Remove Issues",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:45:56.250+0300"
+  },
+  {
+    "key": "BT-19",
+    "summary": "Field Validation and Behavior – Add Lease Form",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:43:21.995+0300"
+  },
+  {
+    "key": "BT-28",
+    "summary": "Employee Import Review",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:42:20.677+0300"
+  },
+  {
+    "key": "BT-20",
+    "summary": "Lessor Edit Fails and UI/Validation Issues",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:41:09.518+0300"
+  },
+  {
+    "key": "BT-17",
+    "summary": "Address Field Validation for Employee Import",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:38:11.198+0300"
+  },
+  {
+    "key": "BT-16",
+    "summary": "Employee Deductibles and Benefits Not Saved on Import",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:37:04.714+0300"
+  },
+  {
+    "key": "BT-67",
+    "summary": "Customer Edit in Sale Orders – Invalid Input Handling",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:36:10.996+0300"
+  },
+  {
+    "key": "BT-60",
+    "summary": "Employee Form – Accepting Invalid Inputs",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:32:36.480+0300"
+  },
+  {
+    "key": "BT-18",
+    "summary": "Approval Hierarchy Visibility Issue",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-29T10:27:51.380+0300"
+  },
+  {
+    "key": "BT-74",
+    "summary": "Lessor creation issues and functionality errors (Edit, Remove, and \"Resource Not Found\")",
+    "assignee": null,
+    "status": "Tests Failed",
+    "reporter": "tekleabhhadush",
+    "updated": "2025-08-29T10:23:55.429+0300"
+  },
+  {
+    "key": "BT-77",
+    "summary": "Purchase,asset,sale, inventory OverView also dashboard pageissue",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T09:33:57.294+0300"
+  },
+  {
+    "key": "BT-82",
+    "summary": "service Item created successfully and displayed in both pages(item, service pages)",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T09:33:54.537+0300"
+  },
+  {
+    "key": "BT-83",
+    "summary": "OVerview page",
+    "assignee": "Heyab G Gebremariam",
+    "status": "Test Planned",
+    "reporter": "lidiya",
+    "updated": "2025-08-29T09:33:51.433+0300"
+  },
+  {
+    "key": "BT-31",
+    "summary": "Import fixed Assets",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-28T15:57:33.623+0300"
+  },
+  {
+    "key": "BT-25",
+    "summary": "Asset class creation",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-28T15:57:26.093+0300"
+  },
+  {
+    "key": "BT-24",
+    "summary": "get asset Item list from purchase",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-28T15:57:23.006+0300"
+  },
+  {
+    "key": "BT-32",
+    "summary": "Import inventory Items",
+    "assignee": null,
+    "status": "Tests Passed",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-28T15:56:21.493+0300"
+  },
+  {
+    "key": "BT-75",
+    "summary": "creating quote for asset Item",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-27T14:16:07.864+0300"
+  },
+  {
+    "key": "BT-76",
+    "summary": "Asset Item purchase process ",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-27T14:15:35.685+0300"
+  },
+  {
+    "key": "BT-78",
+    "summary": "Asset class Acquisition and  Revaluation Date issue",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-27T14:15:23.514+0300"
+  },
+  {
+    "key": "BT-81",
+    "summary": "Partial Bill creation for received purchase order setting remaining number to zero issue  ",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-27T14:13:20.461+0300"
+  },
+  {
+    "key": "BT-80",
+    "summary": "Purchase order creation : before tax value set to zero, Total is empty",
+    "assignee": null,
+    "status": "Testing",
+    "reporter": "lidiya",
+    "updated": "2025-08-27T14:10:48.679+0300"
+  },
+  {
+    "key": "BT-79",
+    "summary": "Asset Item page Issue",
+    "assignee": null,
+    "status": "Blocked",
+    "reporter": "lidiya",
+    "updated": "2025-08-27T14:08:27.911+0300"
+  },
+  {
+    "key": "BT-73",
+    "summary": "verify vendor creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:32.922+0300"
+  },
+  {
+    "key": "BT-72",
+    "summary": "verify purchase requisition creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:32.527+0300"
+  },
+  {
+    "key": "BT-71",
+    "summary": "verify quote creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:32.145+0300"
+  },
+  {
+    "key": "BT-70",
+    "summary": "verify purchase order(PO) creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:31.756+0300"
+  },
+  {
+    "key": "BT-69",
+    "summary": "verify Bill/Invoice creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:31.288+0300"
+  },
+  {
+    "key": "BT-68",
+    "summary": "verify payment creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:30.861+0300"
+  },
+  {
+    "key": "BT-66",
+    "summary": "Sale Orders Creation & Edit – Field-Level Validation Testing (Invalid Inputs)",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:30.067+0300"
+  },
+  {
+    "key": "BT-63",
+    "summary": "quote date validation error is not displaying error",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:28.870+0300"
+  },
+  {
+    "key": "BT-59",
+    "summary": "Vacancy form accepts invalid and unstructured input in key fields",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:27.189+0300"
+  },
+  {
+    "key": "BT-58",
+    "summary": "Applications",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:26.772+0300"
+  },
+  {
+    "key": "BT-57",
+    "summary": "verify service item creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:26.361+0300"
+  },
+  {
+    "key": "BT-55",
+    "summary": "inventory and service item adjustment",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:25.489+0300"
+  },
+  {
+    "key": "BT-53",
+    "summary": "inventory and service item-shipment",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:24.660+0300"
+  },
+  {
+    "key": "BT-50",
+    "summary": "Customer Creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:23.418+0300"
+  },
+  {
+    "key": "BT-48",
+    "summary": "Invoice Page – Budget ID and Item ID Not Visible, Due Date Accepts Invalid Past Dates",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:22.639+0300"
+  },
+  {
+    "key": "BT-47",
+    "summary": "Create Budget Calendar",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:22.216+0300"
+  },
+  {
+    "key": "BT-46",
+    "summary": "Add Budget Calendar",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:21.774+0300"
+  },
+  {
+    "key": "BT-45",
+    "summary": "Create Budget Limit",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:21.361+0300"
+  },
+  {
+    "key": "BT-44",
+    "summary": "Create worksheet",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:20.952+0300"
+  },
+  {
+    "key": "BT-43",
+    "summary": "Record Update",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:20.569+0300"
+  },
+  {
+    "key": "BT-37",
+    "summary": "Create User Invited",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:18.072+0300"
+  },
+  {
+    "key": "BT-36",
+    "summary": "Incorrect Success Toast Shown When Budget Distribution Exceeds Limit",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:17.668+0300"
+  },
+  {
+    "key": "BT-35",
+    "summary": "Budget Module",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:17.271+0300"
+  },
+  {
+    "key": "BT-29",
+    "summary": "Purchase - Vendor Import Check",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:14.761+0300"
+  },
+  {
+    "key": "BT-27",
+    "summary": "Import Bills",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:13.944+0300"
+  },
+  {
+    "key": "BT-26",
+    "summary": "Import bill data issue",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:13.532+0300"
+  },
+  {
+    "key": "BT-23",
+    "summary": "Vendor Edit Page – Invalid Data & Empty Fields",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:12.207+0300"
+  },
+  {
+    "key": "BT-22",
+    "summary": "Item adjustment -total cost calculate by the adjusted quantity only",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:11.795+0300"
+  },
+  {
+    "key": "BT-21",
+    "summary": "payment term for -due date passed bills",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:11.363+0300"
+  },
+  {
+    "key": "BT-15",
+    "summary": "Import payment Issue",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:08.699+0300"
+  },
+  {
+    "key": "BT-14",
+    "summary": "import purchase order data",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:08.280+0300"
+  },
+  {
+    "key": "BT-13",
+    "summary": "notes creation",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:07.888+0300"
+  },
+  {
+    "key": "BT-12",
+    "summary": "Budget Module",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:07.490+0300"
+  },
+  {
+    "key": "BT-11",
+    "summary": "Sells Module",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:07.074+0300"
+  },
+  {
+    "key": "BT-10",
+    "summary": "Purchase module",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:06.633+0300"
+  },
+  {
+    "key": "BT-9",
+    "summary": "inventories and services",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:06.107+0300"
+  },
+  {
+    "key": "BT-8",
+    "summary": "Human Resources",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:05.701+0300"
+  },
+  {
+    "key": "BT-7",
+    "summary": "Budget Module",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:05.256+0300"
+  },
+  {
+    "key": "BT-6",
+    "summary": "Setup",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:04.725+0300"
+  },
+  {
+    "key": "BT-5",
+    "summary": "Payroll",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:04.285+0300"
+  },
+  {
+    "key": "BT-4",
+    "summary": "Import data",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:03.873+0300"
+  },
+  {
+    "key": "BT-3",
+    "summary": "Assets",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:03.408+0300"
+  },
+  {
+    "key": "BT-2",
+    "summary": "Lessor Edit Fails and UI/Validation Issues",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:02.961+0300"
+  },
+  {
+    "key": "BT-1",
+    "summary": "Report",
+    "assignee": null,
+    "status": "Test Planned",
+    "reporter": "Eyuel Mulatu",
+    "updated": "2025-08-14T15:08:02.166+0300"
+  },
+  {
+    "key": "LEARNJIRA-3",
+    "summary": "Atlassian Intelligence: How to work smarter with AI 🤖",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "It.belete.tekle",
+    "updated": "2025-08-07T19:39:19.226+0300"
+  },
+  {
+    "key": "LEARNJIRA-2",
+    "summary": "Plans: How to use detailed roadmaps to plan out your work 📍",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "It.belete.tekle",
+    "updated": "2025-08-07T19:39:18.984+0300"
+  },
+  {
+    "key": "LEARNJIRA-1",
+    "summary": "Security & permissions: How to control who can edit or or manage projects 🚧",
+    "assignee": null,
+    "status": "To Do",
+    "reporter": "It.belete.tekle",
+    "updated": "2025-08-07T19:39:18.497+0300"
+  }
+]

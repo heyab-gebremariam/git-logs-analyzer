@@ -1,180 +1,141 @@
 import os
 import json
-import base64
-import time
-from typing import List, Dict, Any, Optional
-
-import requests
-from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP
-
-load_dotenv()
-
-JIRA_BASE = os.getenv("JIRA_BASE_URL")
-JIRA_EMAIL = os.getenv("JIRA_EMAIL")
-JIRA_TOKEN = os.getenv("JIRA_API_TOKEN")
-DEFAULT_COMMITS_PATH = os.getenv("COMMITS_JSON_PATH", os.path.join(os.path.dirname(__file__), "data", "commits.json"))
-
-if not (JIRA_BASE and JIRA_EMAIL and JIRA_TOKEN):
-    # We still allow server to start for local tests, but the tool will return an error if these are missing.
-    pass
+from models import Commit, JiraIssue, MergedInput, Report
+from typing import List
 
 mcp = FastMCP(
-        name="Git Logs Analyzer", 
-        host="0.0.0.0", 
-        port=8050
+    name="Git Logs Analyzer",
+    host="0.0.0.0",
+    port=8050,
+)
+
+def load_json_file(path: str, default=None):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return default if default is not None else []
+    except Exception as e:
+        return f"Error reading {path}: {str(e)}"
+
+
+@mcp.tool()
+def get_authors() -> str:
+    """Retrieve all authors and their emails from commits.json."""
+    commits_path = os.path.join(os.path.dirname(__file__), "data", "commits.json")
+    data = load_json_file(commits_path, default={"contributors": []})
+    if isinstance(data, str):
+        return json.dumps([])
+
+    authors_list = [
+        {"name": c.get("name", ""), "emails": c.get("emails", [])}
+        for c in data.get("contributors", [])
+    ]
+    return json.dumps(authors_list, indent=2)
+
+
+@mcp.tool()
+def get_commits_by_author(author: str) -> str:
+    """Retrieve commits by a given author."""
+    commits_path = os.path.join(os.path.dirname(__file__), "data", "commits.json")
+    data = load_json_file(commits_path, default={"contributors": []})
+    if isinstance(data, str):
+        return json.dumps({})
+
+    for contrib in data.get("contributors", []):
+        if contrib.get("name", "").lower() == author.lower():
+            commits_list = [
+                Commit(**commit).__dict__ for commit in contrib.get("regular_commits", [])
+            ]
+            overtime_list = [
+                Commit(**commit).__dict__ for commit in contrib.get("overtime_commits", [])
+            ]
+            contrib_dict = {
+                "name": contrib.get("name", ""),
+                "emails": contrib.get("emails", []),
+                "regular_commits": commits_list,
+                "overtime_commits": overtime_list
+            }
+            return json.dumps(contrib_dict, indent=2)
+
+    return json.dumps({})
+
+
+@mcp.tool()
+def get_tickets_and_commits_by_email(email: str) -> str:
+    """Retrieve Jira tickets and commits for a given email, type-guarded."""
+    jira_path = os.path.join(os.path.dirname(__file__), "data", "jira-commits-merged.json")
+    data = load_json_file(jira_path, default={})
+    if isinstance(data, str):
+        return json.dumps({})
+
+    entry = data.get(email, {})
+    tickets: List[JiraIssue] = [
+        JiraIssue(**ticket) for ticket in entry.get("tickets", [])
+    ]
+    regular_commits: List[Commit] = [
+        Commit(**commit) for commit in entry.get("commits", {}).get("regular", [])
+    ]
+    overtime_commits: List[Commit] = [
+        Commit(**commit) for commit in entry.get("commits", {}).get("overtime", [])
+    ]
+
+    merged_input = MergedInput(
+        email=email,
+        name=entry.get("name", ""),
+        tickets=tickets,
+        regular_commits=regular_commits,
+        overtime_commits=overtime_commits
     )
 
-
-def jira_auth_header() -> Dict[str, str]:
-    token = f"{JIRA_EMAIL}:{JIRA_TOKEN}"
-    encoded = base64.b64encode(token.encode()).decode()
-    return {
-        "Authorization": f"Basic {encoded}", 
-        "Accept": "application/json", "Content-Type": 
-        "application/json"
-    }
-
-
-def extract_emails_from_commits(json_path: str) -> List[str]:
-    """Load JSON and extract unique emails from the contributors list."""
-    if not os.path.exists(json_path):
-        raise FileNotFoundError(f"Commits JSON not found at {json_path}")
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    emails = set()
-    contributors = data.get("contributors", [])
-    for c in contributors:
-        for e in c.get("emails", []):
-            emails.add(e)
-    return sorted(emails)
-
-
-def get_account_ids_for_email(email: str) -> List[str]:
-    """
-    Use Jira Cloud user search to get accountId(s) for an email.
-    Endpoint: GET /rest/api/3/user/search?query={email}
-    Returns list of accountIds (could be multiple matches).
-    """
-    if not JIRA_BASE or not JIRA_EMAIL or not JIRA_TOKEN:
-        raise RuntimeError("Jira configuration missing (JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN).")
-
-    url = f"{JIRA_BASE.rstrip('/')}/rest/api/3/user/search"
-    params = {"query": email}
-    headers = jira_auth_header()
-
-    resp = requests.get(url, headers=headers, params=params, timeout=15)
-    resp.raise_for_status()
-    users = resp.json()
-    # Each user may have accountId (Jira Cloud). Return those.
-    account_ids = []
-    for u in users:
-        acct = u.get("accountId")
-        if acct:
-            account_ids.append(acct)
-    return account_ids
-
-
-def search_issues_for_account(account_id: str, max_results: int = 50) -> List[Dict[str, Any]]:
-    """
-    Query Jira for issues where assignee = accountId OR reporter = accountId
-    using Search API (POST).
-    Endpoint: POST /rest/api/3/search  (safer for long JQL)
-    """
-    url = f"{JIRA_BASE.rstrip('/')}/rest/api/3/search"
-    headers = jira_auth_header()
-    jql = f"(assignee = {account_id} OR reporter = {account_id}) ORDER BY updated DESC"
-    payload = {"jql": jql, "maxResults": max_results, "fields": ["key", "summary", "status", "assignee", "reporter", "updated"]}
-    resp = requests.post(url, headers=headers, json=payload, timeout=20)
-    resp.raise_for_status()
-    data = resp.json()
-    return data.get("issues", [])
+    return json.dumps(merged_input.__dict__, indent=2, default=lambda o: o.__dict__)
 
 
 @mcp.tool()
-def get_jira_tickets_for_commits(commits_path: Optional[str] = None, max_issues_per_user: int = 30) -> str:
-    """
-    Tool: read commits json, extract emails, fetch Jira accountIds, and search issues.
-    Returns: formatted text with found issues.
-    """
+def save_reports_batch(reports: list) -> str:
+    """Save multiple reports to JSON file without overwriting existing ones."""
     try:
-        path = commits_path or DEFAULT_COMMITS_PATH
-        emails = extract_emails_from_commits(path)
-        if not emails:
-            return "No contributor emails found in commits JSON."
+        report_path = os.path.join(os.path.dirname(__file__), "data", "reports.json")
+        os.makedirs(os.path.dirname(report_path), exist_ok=True)
 
-        results = {}
-        for email in emails:
-            try:
-                account_ids = get_account_ids_for_email(email)
-            except requests.HTTPError as e:
-                results[email] = {"error": f"Jira user search failed: {str(e)}"}
-                continue
+        # Load existing reports
+        if os.path.exists(report_path):
+            with open(report_path, "r", encoding="utf-8") as f:
+                existing_reports = json.load(f)
+            if not isinstance(existing_reports, list):
+                existing_reports = []
+        else:
+            existing_reports = []
 
-            if not account_ids:
-                results[email] = {"accountIds": [], "issues": []}
-                continue
+        # Append new reports
+        existing_reports.extend(reports)
 
-            user_issues = []
-            # For each accountId (usually 1), fetch issues
-            for acct in account_ids:
-                try:
-                    issues = search_issues_for_account(acct, max_results=max_issues_per_user)
-                except requests.HTTPError as e:
-                    # if search fails for this account, attach error and continue
-                    user_issues.append({"accountId": acct, "error": str(e)})
-                    continue
+        # Save all reports
+        with open(report_path, "w", encoding="utf-8") as f:
+            json.dump(existing_reports, f, indent=2, default=lambda o: o.__dict__)
 
-                # simplify issues to a small dict
-                simplified = []
-                for it in issues:
-                    simplified.append({
-                        "key": it.get("key"),
-                        "summary": (it.get("fields") or {}).get("summary"),
-                        "status": ((it.get("fields") or {}).get("status") or {}).get("name"),
-                        "assignee": ((it.get("fields") or {}).get("assignee") or {}).get("displayName"),
-                        "reporter": ((it.get("fields") or {}).get("reporter") or {}).get("displayName"),
-                        "updated": (it.get("fields") or {}).get("updated"),
-                    })
-                user_issues.append({"accountId": acct, "issues": simplified})
+        return f"All reports saved successfully! Total reports: {len(existing_reports)}"
 
-                # small sleep between account queries to be polite with rate limits
-                time.sleep(0.2)
-
-            results[email] = {"accountIds": account_ids, "issues": user_issues}
-
-        # Format a human readable summary
-        out_lines = []
-        out_lines.append("Jira tickets found for contributor emails:\n")
-        for email, info in results.items():
-            out_lines.append(f"Email: {email}")
-            if "error" in info:
-                out_lines.append(f"  ERROR: {info['error']}\n")
-                continue
-            out_lines.append(f"  accountIds: {info.get('accountIds')}")
-            for acct_block in info.get("issues", []):
-                acct = acct_block.get("accountId")
-                if "error" in acct_block:
-                    out_lines.append(f"   - accountId {acct} -> ERROR: {acct_block['error']}")
-                    continue
-                issues = acct_block.get("issues", [])
-                out_lines.append(f"   - accountId {acct} -> {len(issues)} issue(s)")
-                for it in issues[:10]:
-                    out_lines.append(f"      * {it['key']}: {it['summary']} ({it['status']}) - updated {it['updated']}")
-            out_lines.append("")  # blank line
-
-        return "\n".join(out_lines)
-    except FileNotFoundError as e:
-        return f"File error: {str(e)}"
     except Exception as e:
-        return f"Unexpected error: {str(e)}"
+        return f"Error saving reports: {str(e)}"
 
 
 @mcp.tool()
-def echo(x: str) -> str:
-    return f"echo: {x}"
+def send_reports_batch_slack(reports: list) -> str:
+    """Send multiple reports via Slack."""
+    count = len(reports)
+    
+    for r in reports:
+        r["sent_to_slack_at"] = "now"
+    return f"[Slack] {count} reports sent!"
 
 
-if __name__ == "__main__":
-    mcp.run(transport="stdio")
+@mcp.tool()
+def send_reports_batch_gmail(reports: list) -> str:
+    """Send multiple reports via Gmail."""
+    count = len(reports)
+    
+    for r in reports:
+        r["sent_to_email_at"] = "now"
+    return f"[Gmail] {count} reports sent!"

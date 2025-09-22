@@ -144,7 +144,7 @@ async def main():
             {
                 "reports": [r.__dict__ for r in all_reports],
                 "recipient": "heyab.gebremariam@gmail.com",
-                "subject": "Git Reports",
+                "subject": "Git Log Analyzer Reports",
                 "smtp_data": smtp_data
             }
         )

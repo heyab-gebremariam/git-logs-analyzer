@@ -9,7 +9,8 @@ REPO_NAME="finance-frontend"
 START_DATE="2025-08-01"
 END_DATE="2025-10-01"
 ORG_NAME="BM-Technology-Et"
-OUTPUT_FILE="data/${REPO_NAME}-${START_DATE}-${END_DATE}.json"
+OUTPUT_FILE="data/commits.json"
+# OUTPUT_FILE="data/${REPO_NAME}-${START_DATE}-${END_DATE}.json"
 TZ_OFFSET="+3"   # adjust timezone hours (+3 = Ethiopia)
 # =================
 

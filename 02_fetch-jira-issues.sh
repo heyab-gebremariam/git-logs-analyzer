@@ -4,7 +4,7 @@ set -o pipefail
 
 # ==== CONFIG ====
 JIRA_EMAIL="heyab.gebremariam@gmail.com"
-JIRA_API_TOKEN="ATATT3xFfGF03PIYGM86qHfMII961xEhemHG7xU167Z2kpF5AiGLhQJnm-HVVGF8U4SBRwuz6lPPwrpVlq2vY87xEydYmYYNYskn9fAsht_xUf5YPgDWLaZukSePmaBZtFiLtRAGr1wHM6k82KSoqi7q9JDQ5P-nA-eLW7DEpNRI8ZYnfAeMv5I=569DE168"
+JIRA_API_TOKEN="enter-token-here"
 JIRA_BASE_URL="https://bmtechnology.atlassian.net"
 OUTPUT_FILE="data/jira-issues.json"
 MAX_RESULTS=50

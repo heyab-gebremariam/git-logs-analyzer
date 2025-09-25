@@ -4,7 +4,7 @@
 # Handles all branches + timezone offset
 
 # ==== CONFIG ====
-TOKEN="[REDACTED]"
+TOKEN="enter_token_here"
 REPO_NAME="finance-frontend"
 START_DATE="2025-08-01"
 END_DATE="2025-10-01"
